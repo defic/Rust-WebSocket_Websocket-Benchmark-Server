@@ -26,10 +26,10 @@ RUN cd /home/websocket \
 
 # Build project
 RUN cd /home/websocket \
-    && cargo build
+    && cargo build --release
 
     
 EXPOSE 8080
 
 WORKDIR /home/websocket
-CMD ["/root/.cargo/bin/cargo", "run"]
+CMD ["/root/.cargo/bin/cargo", "run", "--release"]
